@@ -1,0 +1,27 @@
+<h2>Two Way Binding</h2>
+<hr>
+<select [(ngModel)]="selectquater" (change)="quaterchange()">
+  <option *ngFor="let Quater of quaters" value="{{Quater}}">{{Quater}}</option>
+</select>
+
+<select [(ngModel)]="selectmonth">
+  <option *ngFor="let Month of months" value="{{Month}}">{{Month}}</option>
+</select>
+<hr>
+You Selected {{selectquater}} : {{selectmonth}}
+
+<hr>
+
+<h2>Two Way Binding </h2>
+
+<input type="text" [(ngModel)]="country">
+
+{{country}}
+
+<hr>
+
+<input type="text" [(ngModel)]="selectname">
+<input type="text" [(ngModel)]="selectemail">
+<input type="text" [(ngModel)]="selectcity">
+<button (click)="onsub()">submit</button>
+<p *ngFor="let a of array">{{a}}</p>

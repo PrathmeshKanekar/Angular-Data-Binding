@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Data_Binding';
+
+  // Assignment No.2
+  name = "iGAP";
+  txtChange(event:Event){
+    let ctrl = <HTMLInputElement>event.target;
+    this.name = ctrl.value;
+  }
+  // <><><><><><><><><><><><><><>
+
+  
+
 }

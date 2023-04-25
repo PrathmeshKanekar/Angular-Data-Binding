@@ -1,0 +1,45 @@
+<!-- Task 1 : Add Information -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4">
+            Name 
+            <input type="text" (input)="nameD($event)" class="form-control"><br>
+            Email 
+            <input type="text" (input)="emailD($event)" class="form-control"><br>
+            City 
+            <!-- <input type="text" (input)="cityD($event)" class="form-control"><br> -->
+            <select (change)="cityD($event)" class="form-select">
+                <option value=""> --Select--</option>
+                <option *ngFor="let c of cities"  value="{{c}}">{{c}}</option>
+            </select>
+            <br>
+            <button (click)="btnSub()" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-6">
+            <table class="table ">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>City</th>
+                </tr>
+                <tr *ngFor="let d of dataInfo">
+                    <td >
+                        {{d.Uname}}
+                    </td>
+                    <td >
+                        {{d.Uemail}}
+                    </td>
+                    <td >
+                        {{d.Ucity}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+
